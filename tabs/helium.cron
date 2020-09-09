@@ -1,0 +1,9 @@
+MAILTO=pheenan@ribometrix.com
+# MST running
+01,31 * * * *  cd /home/pheenan/mnt/helium/arch/mystuff/src_prh/prhMST/Main/Sweep/ ;  /usr/bin/flock -xn /home/pheenan/mst_lock.ms /usr/bin/bash -c "export PATH=\"/home/pheenan/anaconda3/bin/:$PATH\"; /usr/bin/bash ./main.sh 1>out.log 2>&1"
+# ASMS database backup
+59 22 * * *  cd /home/pheenan/mnt/helium/arch/mystuff/src_prh/PeakSumsAndHits/Code/database/backup/ ; /usr/bin/bash pg_backup_rotated.sh -c pg_backup.config
+# ASMS QC tracking
+01 6,15,22 * * * cd /home/pheenan/mnt/helium/arch/mystuff/src_prh/PeakSumsAndHits/Code/control_tracking ; /home/pheenan/anaconda3/bin/python main_track_controls.py --out_directory /home/pheenan/mnt/helium/arch/rndgrp/ASMS/QC_tracking/ 
+# ASMS database updating
+59 3 * * * cd /home/pheenan/mnt/helium/arch/mystuff/src_prh/PeakSumsAndHits/Code/database/mains/ ; /home/pheenan/anaconda3/bin/python _main_adaptively_add_experiments.py --in_directory ../../../Experiments --forgiving TRUE --overwrite TRUE
