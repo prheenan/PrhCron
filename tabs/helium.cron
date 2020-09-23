@@ -8,4 +8,4 @@ MAILTO=pheenan@ribometrix.com
 # ASMS database updating
 59 3 * * * cd /home/pheenan/mnt/helium/arch/mystuff/src_prh/PeakSumsAndHits/Code/database/mains/ ; /home/pheenan/anaconda3/bin/python _main_adaptively_add_experiments.py --in_directory ../../../Experiments --forgiving TRUE --overwrite TRUE
 # compound manager, every 6 hours. 
-59 22,4,10,16 * * * /home/pheenan/mnt/helium/arch/mystuff/src_prh/PrhCron/sh/cronic /home/pheenan/mnt/helium/arch/mystuff/src_prh/PrhCompoundManager/Code/mains/main_of_mains/main_helium_production.sh
+59 22,4,10,16 * * * /home/pheenan/mnt/helium/arch/mystuff/src_prh/PrhCron/sh/cronic /home/pheenan/src_prh/Ribometrix/PrhCompoundManager/Code/mains/main_of_mains/main_helium_production.sh
