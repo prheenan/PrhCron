@@ -1,6 +1,4 @@
 MAILTO=pheenan@ribometrix.com
-# MST running
-01,31 * * * *  cd /home/pheenan/mnt/helium/arch/mystuff/src_prh/prhMST/Main/Sweep/ ;  /usr/bin/flock -xn /home/pheenan/mst_lock.ms /usr/bin/bash -c "export PATH=\"/home/pheenan/anaconda3/bin/:$PATH\"; /usr/bin/bash ./main.sh 1>out.log 2>&1"
 # ASMS database backup
 59 22 * * *  cd /home/pheenan/mnt/helium/arch/mystuff/src_prh/PeakSumsAndHits/Code/database/backup/ ; /usr/bin/bash pg_backup_rotated.sh -c pg_backup.config
 # ASMS QC tracking
