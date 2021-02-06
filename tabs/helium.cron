@@ -1,6 +1,6 @@
 MAILTO=pheenan@ribometrix.com
 # ASMS database backup
-59 22 * * *  cd /home/pheenan/mnt/helium/arch/mystuff/src_prh/PeakSumsAndHits/Code/database/backup/ ; /usr/bin/bash pg_backup_rotated.sh -c pg_backup.config
+59 22 * * *  cd /home/pheenan/src_prh/Ribometrix/PrhCompoundManager/Code/mains/backup/ ; /usr/bin/bash pg_backup_rotated.sh -c pg_backup.config
 # ASMS QC tracking
 01 6,15,22 * * * cd /home/pheenan/mnt/helium/arch/mystuff/src_prh/PeakSumsAndHits/Code/control_tracking ; /home/pheenan/anaconda3/bin/python main_track_controls.py --out_directory /home/pheenan/mnt/helium/arch/rndgrp/ASMS/QC_tracking/ 
 # ASMS database updating
