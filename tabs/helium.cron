@@ -1,6 +1,6 @@
 MAILTO=pheenan@ribometrix.com
-# ASMS database backup, retired on 2021-07-12
-#59 22 * * *  cd /home/pheenan/src_prh/Ribometrix/PrhCompoundManager/Code/mains/backup/ ; /usr/bin/bash pg_backup_rotated.sh -c pg_backup.config
+# cmpd data database backup
+59 22 * * *  cd /home/pheenan/src_prh/Ribometrix/PrhCompoundManager/Code/mains/backup/ ; /usr/bin/bash pg_backup_rotated.sh -c pg_backup.config
 # ASMS QC tracking, retired on 2021-07-12
 #01 6,15,22 * * * cd /home/pheenan/mnt/helium/arch/mystuff/src_prh/PeakSumsAndHits/Code/control_tracking ; /home/pheenan/anaconda3/bin/python main_track_controls.py --out_directory /home/pheenan/mnt/helium/arch/rndgrp/ASMS/QC_tracking/ 
 # ASMS database updating, retired on 2021-07-12
