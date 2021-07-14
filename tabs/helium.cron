@@ -8,4 +8,4 @@ MAILTO=pheenan@ribometrix.com
 # compound manager, every 6 hours, monday to friday
 59 22,4,10,16 * * 1-5 /home/pheenan/mnt/helium/arch/mystuff/src_prh/PrhCron/sh/cronic /home/pheenan/src_prh/Ribometrix/PrhCompoundManager/Code/mains/main_of_mains/main_helium_production.sh
 # 1 AM on saturdays: re-read everything
-# 0 1 * *  6 /home/pheenan/mnt/helium/arch/mystuff/src_prh/PrhCron/sh/cronic /home/pheenan/src_prh/Ribometrix/PrhCompoundManager/Code/mains/_main_reread_regmol/main.sh
+# 0 1 * *  6 /usr/bin/bash /home/pheenan/src_prh/Ribometrix/PrhCompoundManager/Code/mains/_main_reread_regmol/main.sh
